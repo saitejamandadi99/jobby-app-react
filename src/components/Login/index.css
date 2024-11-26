@@ -3,6 +3,7 @@
   background-color: black;
   min-height: 100vh;
   width: 100vw;
+  padding: 10px;
   max-height: auto;
   justify-content: center;
   align-items: center;
@@ -15,8 +16,8 @@
   flex-direction: column;
   align-items: center;
   background-color: #2c364c;
-  height: 380px;
-  width: 380px;
+  height: 480px;
+  width: 480px;
   border-radius: 10px;
   padding: 20px;
 }
@@ -68,11 +69,15 @@
   outline: none;
   cursor: pointer;
 }
+.errorMsg {
+  color: red;
+  font-size: 19px;
+}
 
 @media screen and (max-width: 576px) {
   .loginForm {
-    height: 290px;
-    width: 260px;
+    height: 350px;
+    width: 350px;
   }
   .websiteLogo {
     height: 30px;
@@ -91,5 +96,8 @@
   .LoginButton {
     height: 30px;
     width: 100px;
+  }
+  .errorMsg {
+    font-size: 13px;
   }
 }
