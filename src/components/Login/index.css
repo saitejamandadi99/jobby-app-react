@@ -1,0 +1,95 @@
+.loginFormContainer {
+  display: flex;
+  background-color: black;
+  min-height: 100vh;
+  width: 100vw;
+  max-height: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2c364c;
+  height: 380px;
+  width: 380px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.websiteLogo {
+  flex-direction: row;
+  align-self: center;
+  margin-top: 15px;
+  height: 40px;
+}
+.userDetailsInput {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+.usernameInputContainer,
+.userPasswordInputContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  margin: 3px;
+}
+.labelElement {
+  font-family: Roboto;
+  color: white;
+  padding: 3px;
+  font-size: 15px;
+}
+.inputEle {
+  background-color: transparent;
+  border: solid 1px #f8fafc;
+  width: 270px;
+  height: 37px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+.LoginButton {
+  color: white;
+  background-color: #4f46e5;
+  width: 100px;
+  height: 35px;
+  border: 0px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .loginForm {
+    height: 290px;
+    width: 260px;
+  }
+  .websiteLogo {
+    height: 30px;
+  }
+  .userDetailsInput {
+    padding: 5px;
+    margin: 5px;
+  }
+  .labelElement {
+    font-size: 12px;
+  }
+  .inputEle {
+    width: 200px;
+    font-size: 12px;
+  }
+  .LoginButton {
+    height: 30px;
+    width: 100px;
+  }
+}
