@@ -1,0 +1,70 @@
+.navBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202020;
+  font-family: Roboto;
+  color: white;
+  height: 80px;
+}
+.website-Logo-home-page {
+  height: 40px;
+  margin-left: 100px;
+}
+.icons {
+  color: white;
+}
+.navbar_for_small {
+  display: none;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.iconButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.navbar-for_medium {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listElementContainer {
+  list-style: none;
+  text-decoration: none;
+  font-family: Roboto;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-right: 250px;
+}
+.logoutButton {
+  background-color: #4f46e5;
+  color: white;
+  height: 35px;
+  width: 120px;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+.liEle {
+  margin: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar_for_small {
+    display: flex;
+  }
+  .navbar-for_medium {
+    display: none;
+  }
+}
