@@ -6,6 +6,8 @@
   font-family: Roboto;
   color: white;
   height: 80px;
+  margin: 0px;
+  padding: 0px;
 }
 .website-Logo-home-page {
   height: 40px;
@@ -66,5 +68,8 @@
   }
   .navbar-for_medium {
     display: none;
+  }
+  .website-Logo-home-page {
+    margin-left: 40px;
   }
 }

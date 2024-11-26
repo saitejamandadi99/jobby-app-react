@@ -29,17 +29,17 @@ const Header = props => {
       <div className="navbar_for_small">
         <Link to="/">
           <button type="button" className="iconButton">
-            <IoMdHome className="icons" size="20" />
+            <IoMdHome className="icons" size="25" />
           </button>
         </Link>
         <Link to="/jobs">
           <button type="button" className="iconButton">
-            <BsBriefcase className="icons" size="20" />
+            <BsBriefcase className="icons" size="25" />
           </button>
         </Link>
 
         <button type="button" className="iconButton" onClick={logoutUser}>
-          <FiLogOut className="icons" size="20" />
+          <FiLogOut className="icons" size="25" />
         </button>
       </div>
 

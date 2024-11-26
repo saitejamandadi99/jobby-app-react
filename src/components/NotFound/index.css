@@ -6,6 +6,9 @@
   background-color: black;
   color: white;
   font-family: Roboto;
+  min-height: 100vh;
+
+  padding: 10px;
 }
 .notFoundImage {
   height: 200px;
@@ -15,7 +18,9 @@
   font-size: 20px;
 }
 .notFoundPara {
+  margin-top: 10px;
   font-size: 18px;
+  text-align: center;
 }
 @media screen and (max-height: 576px) {
   .notFoundImage {
