@@ -18,9 +18,10 @@ class Login extends Component {
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {expires: 30})
     this.setState({showError: false, isLoading: false})
-    
+
     history.replace('/')
   }
+
   onSubmitFailure = errorMsg => {
     this.setState({isLoading: false, showError: true, errorMsg})
   }
@@ -69,7 +70,6 @@ class Login extends Component {
   render() {
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      
       return <Redirect to="/" />
     }
     const {

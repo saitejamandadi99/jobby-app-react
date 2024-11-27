@@ -1,6 +1,6 @@
 import {withRouter, Link} from 'react-router-dom'
 
-import Cookie from 'js-cookie'
+import Cookies from 'js-cookie'
 
 import {IoMdHome} from 'react-icons/io'
 
@@ -13,7 +13,7 @@ import './index.css'
 const Header = props => {
   const logoutUser = () => {
     const {history} = props
-    Cookie.remove('jwt_token')
+    Cookies.remove('jwt_token')
     history.replace('/login')
   }
   return (
