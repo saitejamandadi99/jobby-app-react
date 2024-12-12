@@ -1,6 +1,5 @@
-import {AiFillStar} from 'react-icons/ai'
-import {BsBriefcaseFill} from 'react-icons/bs'
-import {GoLocation} from 'react-icons/go'
+import {BsFillBriefcaseFill, BsStarFill} from 'react-icons/bs'
+import {MdLocationOn} from 'react-icons/md'
 import './index.css'
 
 const SimilarJobItem = props => {
@@ -10,40 +9,40 @@ const SimilarJobItem = props => {
     employmentType,
     jobDescription,
     location,
-    title,
     rating,
+    title,
   } = jobDetails
-
   return (
-    <li className="similar-list-docs">
-      <div className="logo-container">
-        <img
-          src={companyLogoUrl}
-          alt="similar job company logo"
-          className="company-logo-url"
-        />
-        <div>
-          <h1 className="company-logo-title">{title}</h1>
-          <div className="rating-container">
-            <AiFillStar className="star-icon" />
-            <p className="count-rating">{rating}</p>
+    <li className="similar-job-item">
+      <div className="logo-title-location-container">
+        <div className="logo-title-container">
+          <img
+            src={companyLogoUrl}
+            alt="similar job company logo"
+            className="company-logo"
+          />
+          <div className="title-rating-container">
+            <h1 className="title-heading">{title}</h1>
+            <div className="rating-container">
+              <BsStarFill className="rating-icon" />
+              <p className="rating-heading">{rating}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <h1 className="similar-desc-heading">Description</h1>
-      <p className="similar-desc">{jobDescription}</p>
-      <div className="location-container-flex-justify">
-        <div className="responsive">
-          <GoLocation className="location-logo" />
-          <p className="location-desc">{location}</p>
-        </div>
-        <div className="responsive">
-          <BsBriefcaseFill className="location-logo-brief" />
-          <p className="location-desc">{employmentType}</p>
+        <h1 className="description-heading">Description</h1>
+        <p className="description-text">{jobDescription}</p>
+        <div className="location-employee-container">
+          <div className="location-container">
+            <MdLocationOn className="location-icon" />
+            <p className="location-heading">{location}</p>
+          </div>
+          <div className="employee-type-container">
+            <BsFillBriefcaseFill className="brief-case-icon" />
+            <p className="employee-type-heading">{employmentType}</p>
+          </div>
         </div>
       </div>
     </li>
   )
 }
-
 export default SimilarJobItem

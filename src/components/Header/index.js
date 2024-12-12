@@ -1,62 +1,86 @@
-import {withRouter, Link} from 'react-router-dom'
-
+import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
-
-import {IoMdHome} from 'react-icons/io'
-
-import {BsBriefcase} from 'react-icons/bs'
-
 import {FiLogOut} from 'react-icons/fi'
-
+import {AiFillHome} from 'react-icons/ai'
+import {BsFillBriefcaseFill} from 'react-icons/bs'
 import './index.css'
 
 const Header = props => {
-  const logoutUser = () => {
+  const onClickLogout = () => {
     const {history} = props
     Cookies.remove('jwt_token')
     history.replace('/login')
   }
   return (
-    <nav className="navBarContainer">
-      <Link to="/">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-          className="website-Logo-home-page"
-        />
-      </Link>
+    <>
+      <nav className="nav-header">
+        <div className="nav-content">
+          <div className="nav-bar-mobile-container">
+            <Link to="/">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
+                className="website-logo"
+                alt="website logo"
+              />
+            </Link>
+            <ul className="nav-bar-mobile-icons-container">
+              <li>
+                <Link to="/">
+                  <AiFillHome className="nav-item-mobile-link" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/jobs">
+                  <BsFillBriefcaseFill className="nav-item-mobile-link" />
+                </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="nav-mobile-btn"
+                  onClick={onClickLogout}
+                >
+                  Click
+                  <FiLogOut />
+                </button>
+              </li>
+            </ul>
+          </div>
 
-      <div className="navbar_for_small">
-        <Link to="/">
-          <button type="button" className="iconButton">
-            <IoMdHome className="icons" size="25" />
-          </button>
-        </Link>
-        <Link to="/jobs">
-          <button type="button" className="iconButton">
-            <BsBriefcase className="icons" size="25" />
-          </button>
-        </Link>
+          <div className="nav-bar-large-container">
+            <Link to="/">
+              <img
+                className="website-logo"
+                src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+                alt="website logo"
+              />
+            </Link>
+            <ul className="nav-menu">
+              <li className="nav-menu-item">
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+              </li>
 
-        <button type="button" className="iconButton" onClick={logoutUser}>
-          <FiLogOut className="icons" size="25" />
-        </button>
-      </div>
-
-      <div className="navbar-for_medium">
-        <ul className="listElementContainer">
-          <Link to="/" className="liEle">
-            <li>Home</li>
-          </Link>
-          <Link to="/jobs" className="liEle">
-            <li>Jobs</li>
-          </Link>
-        </ul>
-        <button type="button" className="logoutButton" onClick={logoutUser}>
-          Logout
-        </button>
-      </div>
-    </nav>
+              <li className="nav-menu-item">
+                <Link to="/jobs" className="nav-link">
+                  Jobs
+                </Link>
+              </li>
+            </ul>
+            <div className="large-device-button-container">
+              <button
+                type="button"
+                className="logout-desktop-btn"
+                onClick={onClickLogout}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
   )
 }
 
